@@ -21,14 +21,14 @@ export default function PurchaseButton({ courseId }) {
       }
 
       const paymentData = await PortOne.requestPayment({
-        storeId: "store-eaf5f6d6-43c4-41dd-a257-37480dee720c",
-        channelKey: "channel-key-b86e1349-1b4a-4930-90b2-23630bdcbeeb",
+        storeId: "Your store-ID",
+        channelKey: "Your channel-key",
         paymentId: `payment-${crypto.randomUUID()}`,
         orderName: courseConfig.title,
         totalAmount: courseConfig.discountPrice,
         currency: "KRW",
         payMethod: "CARD",
-        pgProvider: "TOSSPAYMENTS",
+        pgProvider: "PG Provider",
         customer: {
           customerId: user.id,
           fullName: user.user_metadata.name || '구매자',
